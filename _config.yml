@@ -1,0 +1,51 @@
+---
+title: Tscm
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  services:
+    title: Services
+    output: false
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+  values:
+    layout: default
+    title: ''
+    description: ''
+    keywords: ''
+    featured-image_path: ''
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    title: ''
+    categories: ''
+    author: Joe
+    image_path: ''
+- scope:
+    path: ''
+    type: products
+  values:
+    title: ''
+    description: ''
+    price: ''
+    type: ''
+    image_path: ''
+brand_color: "#f05f40"
+featured_color: red
+light_color: grey
+font_family: Courier New
+heading_font_size: 18px
+body_font_size: 18px
+categories:
+- food
+- wine
+- travel
+- chocolate

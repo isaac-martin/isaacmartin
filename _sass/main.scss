@@ -1,0 +1,507 @@
+
+// Colors
+
+$brand-wht: #fff;
+$brand-light-grey: #78746f;
+$brand-grey: #333;
+$brand-blk: #000;
+$brand-hl: #f97352;
+$brand-madison: #2c3e50;
+
+@import "../node_modules/typi/scss/typi";
+@import 'reset';
+@import 'type';
+@import 'reuse';
+
+
+body {
+  background-color: #ececec;
+}
+
+//Header
+
+.scrolled header {
+  background:  rgba($brand-blk, .9);
+}
+
+header {
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: transparent;
+  transition: background .5s ease;
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    float: left;
+
+    a {
+      color: $brand-wht;
+      text-transform: uppercase;
+      font-size: 16px;
+      padding: 0 20px 3px 0;
+      font-weight: 300;
+    }
+
+    a:hover, a:visited, a:active {
+      text-decoration: none;
+      color: $brand-wht;
+    }
+
+    a:after {
+    content: '';
+    display: block;
+    position: relative;
+    margin: auto;
+    right: 0;
+    bottom: -4px;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+  a:hover:after {
+    width: 100%;
+    background: $brand-hl;
+  }
+  }
+
+  .appointment-wrapper button {
+    display: inline-block;
+    float: left;
+  }
+  .phone {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    float: left;
+    color: $brand-wht;
+    margin: 10px 10px 0 0;
+  }
+}
+
+.header-internal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+   justify-content: space-between;
+   padding: 15px 0;
+}
+
+.image-bg {
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/default.jpeg);
+  padding-top: 100px;
+  min-height: 100vh;
+  color: $brand-wht;
+
+  h1 {
+    text-align: center;
+  }
+
+  p{
+    width: 60%;
+    margin: 0 20% 40px 20%;
+    text-align: center;
+  }
+}
+
+.image-bg:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.content-wrap {
+position: relative;
+z-index: 1;
+padding: 60px;
+
+h2 {
+  text-align: center;
+}
+}
+
+.main-logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.who {
+  background-color: $brand-hl;
+  padding: 60px;
+  text-align: center;
+  color: $brand-wht;
+
+  p {
+    margin: 0 0 40px 0;
+  }
+}
+
+.why {
+  min-height: 30vh;
+  padding: 80px 0;
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: .5rem;
+    margin: 0 0 80px 0;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+
+    span {
+      font-size: 3.6rem;
+      display: block;
+      margin: 0 0 30px 0;
+    }
+  }
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: $brand-wht;
+  margin: 20px 0;
+}
+
+.equal {
+  height: 50vh;
+}
+
+.img-cont {
+  overflow: hidden;
+  img {
+  object-fit: cover;
+  height: 50vh;
+  width: 100%
+}
+}
+
+
+//Services
+
+.services-home , .clinic-wrap{
+  position: relative;
+display: inline-block;
+width: 100vw;
+}
+
+.little-line {
+  display: block;
+  height: 2px;
+  width: 100%;
+  margin: 7px 0;
+  background-color: $brand-grey;
+}
+
+//Home Page Loop
+
+.service-bg {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  // min-height: 35vh;
+  margin-bottom: 30px;
+  color: $brand-wht;
+  transition: all .5s ease;
+
+  .sml-line{
+    height: 3px;
+    width: 60px;
+    background-color: $brand-wht;
+    margin: 20px 0;
+  }
+
+  .text-inner {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+  }
+}
+
+.service-bg:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba($brand-blk , 0.6);
+}
+
+// .service-bg:hover {
+//   background-size: 1;
+// }
+
+.service-group {
+  margin-top: 100px;
+}
+.service-wrap {
+  margin-bottom: 100px;
+
+  .appointment {
+    margin-top: 40px;
+    background-color: $brand-hl;
+    border-color: $brand-hl;
+    color: $brand-grey;
+  }
+}
+
+.service-img {
+  width: 65%;
+  display: inline-block;
+  position: relative;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.service-text {
+  width: 30%;
+  display: inline-block;
+  position: relative;
+}
+
+.odd {
+
+  .service-text {
+  float: right;
+}
+
+.service-images {
+float: left;
+margin-right: 4%;
+}
+
+
+}
+
+.even {
+  .service-text {
+  float: left;
+  margin-right: 4%;
+}
+
+.service-images {
+float: right;
+}
+}
+
+
+
+
+//Team
+
+.team-wrap {
+  margin-top: 60px;
+}
+
+.staff-photo {
+  padding: 0;
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+}
+
+
+
+//Contact Form
+
+.contact-form {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #333;
+  color: $brand-wht;
+
+  .contact-label {
+    font-weight: 400;
+  }
+
+  a {
+    color: $brand-wht;
+    text-decoration: none;
+    transition: all .5s ease;
+  }
+
+  a:hover {
+    color: $brand-hl;
+  }
+
+  .x-icon {
+    position: relative;
+    top: 0;
+    float: right;
+    display: inline-block;
+    color: $brand-wht;
+    transition: all .5s ease;
+    cursor: pointer;
+  }
+
+  i:hover {
+    color: rgba($brand-wht, 0.7);
+  }
+
+  .form-header {
+    padding: 60px 0;
+    border-bottom: 1px solid #454545;
+  }
+
+
+  .form-body {
+    width: 100%;
+    border-bottom: 1px solid #454545;
+    padding: 60px 0;
+  }
+
+  .field {
+    margin-bottom: 30px;
+  }
+
+  .half-form-col {
+    width: 49%;
+    display: inline-block;
+    position: relative;
+    float: right;
+  }
+
+  .full-form-col input {
+    height: 100px;
+  }
+
+  input, textarea {
+    width: 100%;
+    background: none;
+    border-radius: 4px;
+    border: 2px solid $brand-light-grey;
+    color: $brand-wht;
+    padding: 12px 8px;
+    font-weight: 300;
+    font-size: 16px;
+    transition: .2s ease all;
+
+  }
+
+  input{
+    height: 50px;
+  }
+
+  input:focus, textarea:focus {
+    outline: none!important;
+  }
+
+  input[type=submit] {
+    background: $brand-light-grey;
+    color: $brand-wht;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    transition: all .5s ease;
+  }
+
+  input[type=submit]:hover {
+    background: $brand-hl;
+    border-color: $brand-hl;
+    color: $brand-grey;
+  }
+
+  textarea {
+    resize: none;
+    height: 100px;
+}
+
+  .left {
+    margin-right: 2%;
+    float: left;
+  }
+
+  .form-label {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    color: $brand-light-grey;
+    transition: .2s ease all;
+  }
+
+  .focused {
+    .form-label {
+      color: $brand-hl;
+    }
+
+    input, textarea {
+      border-color: $brand-hl
+    }
+  }
+}
+
+
+footer {
+  background-color: $brand-grey;
+
+  .footer-inner {
+    padding: 20px 0;
+  }
+
+  a {
+    color: $brand-wht;
+  }
+}
+
+.fl-left {
+  display: inline-block;
+  position: relative;
+  float: left;
+  width: 50%;
+  color: $brand-wht;
+}
+
+.fl-right {
+  display: inline-block;
+  position: relative;
+  float: left;
+  width: 50%;
+  text-align: right;
+}
+
+.discover-wrap {
+  text-align: center;
+
+  h4 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+}
+//Animation
+.animate {
+opacity: 0;
+transform: translateY(25%);
+transition: opacity 1s, transform 1s;
+transition-delay: 2s;
+}
+
+.animate.animated {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}

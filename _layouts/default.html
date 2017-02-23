@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include head.html %}
+</head>
+
+
+<body>
+
+    <header>
+      <div class="container header-internal">
+        <nav>
+          <a href="/index"> Home </a>
+          <a href="/services"> Our Services </a>
+          <a href="/our-clinic"> Our Clinic </a>
+          <a href="/blog"> Blog </a>
+          <a href="#" data-toggle="modal" data-target="#myModal"> Contact </a>
+        </nav>
+        <div class="appointment-wrapper">
+          <span class="phone">03 0000 0000</span>
+        </div>
+        <!-- /.appointment-wrapper -->
+      </div>
+      <!-- /.container -->
+    </header>
+
+    <div class="main-wrapper">
+      <main class="ajax">
+        {{content}} <!-- this is where the content from each page will be pasted when jekyll renders -->
+      </main>
+    </div>
+    <!-- /.main-wrapper -->
+
+    <div id="instagram"></div>
+    <footer>
+      <div class="footer-inner container">
+        <div class="fl-left">
+          <p>	&copy; Copyright {{ site.time | date: '20%y' }} The Sports Clinic Of Melbourne</p>
+        </div>
+        <div class="fl-right">
+          <a class="social" href="https://www.instagram.com/sportsclinicmelb/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a class="social" href="https://www.instagram.com/sportsclinicmelb/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    {% include body-scripts.html %} <!-- this will paste in all of the scripts you want before the closing body tag -->
+
+</body>
+</html>

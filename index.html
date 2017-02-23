@@ -1,0 +1,91 @@
+---
+layout: default
+title: Isaac Martin | Freelance Web Developer
+description:
+keywords:
+---
+
+<div class="image-bg" style="background-image:url('{{ page.image-header_path }}')">
+    <div class="container">
+        <div class="content-wrap">
+            <img src="images/logos/tscm-emblem-white.png" class="main-logo">
+        <h1 class="editable">The Sports Clinic Melbourne</h1>
+        <h2 class="editable">Physio, Massage &amp; Training</h2>
+          <!-- <p>The Sports Clinic of Melbourne fosters an environment where patients can make lasting change by linking physio with training and gym</p> -->
+</div>
+    </div>
+</div>
+<!-- /.content-wrap --> <!-- /.container --><!-- /.image-bg -->
+
+<div class="who">
+    <div class="container">
+        <h2 class="editable">WHO WE ARE</h2>
+        <p class="editable">We’re a sports physiotherapy practice located in South Yarra dedicated to improving the health and wellness of our sports and fitness loving Melburnians.<br /><br />
+            We work closely with personal trainers and massage therapists to get you back on your fitness track in the fastest time possible. <br /><br />
+We genuinely love what we do and this passion drives us to deliver great results.
+        </p>
+        <button class="btn btn-white btn-center"><a href="/our-clinic">Read More</a></button>
+    </div>
+    <!-- /.container -->
+</div>
+
+<div class="why image-bg" style="background-image:url('{{ page.why-image_path }}')">
+    <div class="container">
+        <div class="content-wrap">
+        <h2 class="editable">WHY PEOPLE CHOOSE US</h2>
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <h3 class="editable"><span>45</span>MINUTES</h3>
+                <div class="line"></div>
+                <h3 class="editable">EXTENDED APPOINTMENT TIMES</h3>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <h3 class="editable"><span>100%</span>Authentic</h3>
+                <div class="line"></div>
+                <h3 class="editable">WE ACTUALLY LIKE HELPING YOU REACH YOUR GOALS</h3>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <h3 class="editable"><span>1-ON-1</span>CARE</h3>
+                <div class="line"></div>
+                <h3 class="editable">FOR YOUR WHOLE CONSULTATION, EVERY TIME</h3>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <h3 class="editable"><span>0</span>Gimmicks</h3>
+                <div class="line"></div>
+                <h3 class="editable">ONLY TOP-NOTCH,RESEARCH-BASED PHYSIO</h3>
+        </div>
+    </div>
+
+        <button class="btn btn-white btn-center margin-top"><a href="/our-clinic">Read More</a></button>
+        <!-- /.col-md-3 -->
+    </div>
+    </div>
+    <!-- /.content-wrap -->
+    <!-- /.container -->
+</div>
+<!-- /.why -->
+
+<div class="services-home">
+    <!-- /.madison-bg -->
+<div class="container">
+    <h2 class="editable">OUR SERVICES</h2>
+<p class="editable">All of our consultations are one-on-one with an experienced physiotherapist who is registered with Australian Physiotherapy Association. GP referrals are not necessary and we will give you an instant rebate on your consultation provided you bring your health insurance card along.</p>
+</div>
+
+{% for service in site.services %}
+<div class="col-md-6">
+<div class="service-bg service-{{ forloop.index }}" style="background-image: url('{{service.featured-img_path}}');">
+    <div class="text-inner">
+        <h3> {{service.title}} </h3>
+
+    </div>
+</div>
+</div>
+{% endfor %}
+</div>
+
+<!-- /.container -->
+
+
+<!-- </div>
+</div> -->
