@@ -516,8 +516,8 @@ a:visited {
   /** An element that fades in and slides up */
   /** An element that fades in and slides from the right */ }
   .m-scene .scene_element {
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
+    -webkit-animation-duration: 0.75s;
+            animation-duration: 0.75s;
     -webkit-transition-timing-function: ease-in;
             transition-timing-function: ease-in;
     -webkit-animation-fill-mode: both;
