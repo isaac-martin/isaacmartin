@@ -395,5 +395,265 @@ a:visited {
   color: #009999; }
 
 /* Literal.Number.Integer.Long */
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+.pulse {
+  -webkit-animation: pulse 5s infinite;
+          animation: pulse 5s infinite; }
+
+/*
+ * Keyframes
+ */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes grow {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes grow {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+.m-scene {
+  /** Basic styles for an animated element */
+  /** An element that fades in */
+  /** An element that fades in and slides up */
+  /** An element that fades in and slides from the right */ }
+  .m-scene .scene_element {
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both; }
+  .m-scene .scene_element--fadein {
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn; }
+  .m-scene .scene_element--fadeinup {
+    -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp; }
+  .m-scene .scene_element--fadeindown {
+    -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown; }
+  .m-scene .scene_element--fadeinright {
+    -webkit-animation-name: fadeInRight;
+            animation-name: fadeInRight; }
+  .m-scene .scene_element--grow {
+    -webkit-animation-name: grow;
+            animation-name: grow; }
+  .m-scene.is-exiting .scene_element {
+    -webkit-animation-direction: alternate-reverse;
+            animation-direction: alternate-reverse; }
+
+@font-face {
+  font-family: 'brandon-grotesque-bold';
+  src: url("../assetts/font/brandon-grotesque-bold/brandon_bld.eot");
+  src: url("../assetts/font/brandon-grotesque-bold/brandon_bld.eot?#iefix") format("embedded-opentype"), url("../assetts/font/brandon-grotesque-bold/brandon_bld.woff") format("woff"), url("../assetts/font/brandon-grotesque-bold/brandon_bld.ttf") format("truetype"), url("../assetts/font/brandon-grotesque-bold/brandon_bld.svg#brandon-grotesque-bold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'brandon-grotesque-medium';
+  src: url("../assetts/font/brandon-grotesque-medium/brandon_med.eot");
+  src: url("../assetts/font/brandon-grotesque-medium/brandon_med.eot?#iefix") format("embedded-opentype"), url("../assetts/font/brandon-grotesque-medium/brandon_med.woff") format("woff"), url("../assetts/font/brandon-grotesque-medium/brandon_med.ttf") format("truetype"), url("../assetts/font/brandon-grotesque-medium/brandon_med.svg#brandon-grotesque-medium") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'brandon-grotesque-regular';
+  src: url("../assetts/font/brandon-grotesque-regular/brandon_reg.eot");
+  src: url("../assetts/font/brandon-grotesque-regular/brandon_reg.eot?#iefix") format("embedded-opentype"), url("../assetts/font/brandon-grotesque-regular/brandon_reg.woff") format("woff"), url("../assetts/font/brandon-grotesque-regular/brandon_reg.ttf") format("truetype"), url("../assetts/font/brandon-grotesque-regular/brandon_reg.svg#brandon-grotesque-regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
-  background: orange; }
+  background-color: #11142a;
+  font-family: "brandon-grotesque-bold";
+  color: #fbfbf8; }
+  body a {
+    color: #fbfbf8;
+    text-decoration: none; }
+    body a:hover {
+      text-decoration: none;
+      color: inherit; }
+
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 30px; }
+
+.col-1 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
+.col-2 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
+.circle-graphic {
+  margin-top: 100px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  width: 60%;
+  padding-top: 60%;
+  height: 0;
+  position: absolute;
+  top: 0;
+  right: 80px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f78ca0), color-stop(19%, #f9748f), color-stop(60%, #fd868c), to(#fe9a8b));
+  background-image: -webkit-linear-gradient(left, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%); }
+
+#content-wrapper {
+  position: relative;
+  padding: 4rem 2rem 2rem 2rem; }
+  #content-wrapper a {
+    display: inline-block;
+    position: relative; }
+    #content-wrapper a:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 15px;
+      width: 100%;
+      -webkit-transition: width 0s ease;
+      transition: width 0s ease; }
+    #content-wrapper a:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 15px;
+      width: 100%;
+      background-image: -webkit-gradient(linear, left top, right top, from(#f78ca0), color-stop(19%, #f9748f), color-stop(60%, #fd868c), to(#fe9a8b));
+      background-image: -webkit-linear-gradient(left, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+      background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+      -webkit-transition: width .5s ease;
+      transition: width .5s ease; }
+    #content-wrapper a:hover:before {
+      width: 0%;
+      background-image: -webkit-gradient(linear, left top, right top, from(#f78ca0), color-stop(19%, #f9748f), color-stop(60%, #fd868c), to(#fe9a8b));
+      background-image: -webkit-linear-gradient(left, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+      background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+      -webkit-transition: width .5s ease;
+      transition: width .5s ease; }
+    #content-wrapper a:hover:after {
+      width: 0%;
+      background: transparent;
+      -webkit-transition: width 0s ease;
+      transition: width 0s ease; }
+
+p.intro {
+  font-size: 5rem;
+  line-height: 5.4rem;
+  text-align: left; }

@@ -3,11 +3,9 @@ layout: default
 title: Isaac Martin
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div>
+  <p class="intro">
+    Hi – I’m Isaac Martin, a freelance web developer living in <span class="cross">Sydney</span> New York and working worldwide.
+    <a href="about">Read About Me</a>, <a href="work">Look at my Work</a> or <a href="contact">Get In Touch.</a>
+  </p>
 </div>

@@ -4,32 +4,26 @@
 {% include head.html %}
 </head>
     <body>
-
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          {{ content }}
+      <div class="m-scene" id="main">
+         <nav class="scene_element scene_element--fadeindown">
+           <a href="index.html">Home</a><a href="about.html">About</a><a href="work.html">Work</a><a href="contact.html">Contact</a>
+         </nav>
 
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name is<br />
-                What You Are<br />
-                you@example.com
-              </p>
+         <div class="container">
+            <div id="content-wrapper" class="col-1 scene_element scene_element--fadeinup">
+                   {{ content }}
             </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
+
+            <div class="scene_element scene_element--grow col-1">
+               <div class="circle-graphic pulse"></div>
             </div>
-          </div>
-        </div>
+         </div>
+
+
+
+      <!-- <div class="social-links scene_element scene_element--fadeinright"></div> -->
+   </div><!-- End #main -->
    {% include body-scripts.html %} <!-- this will paste in all of the scripts you want before the closing body tag -->
     </body>
 </html>
