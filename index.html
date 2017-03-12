@@ -45,33 +45,44 @@
 
 <!-- end stylesheets -->
 
+
 </head>
     <body>
       <div class="m-scene" id="main">
-         <nav class="scene_element scene_element--fadeindown">
-           <a href="index.html">Home</a><a href="about.html">About</a><a href="work.html">Work</a><a href="contact.html">Contact</a>
+         <nav class="nav-bar scene_element scene_element--fadeindown">
+            <nav class="nav-inner">
+               <a  href="index.html">Home</a>
+               <a  href="about.html">About</a>
+               <a  href="work.html">Work</a>
+               <a  href="contact.html">Contact</a>
+            </nav>
          </nav>
 
 
          <div class="container">
-            <div id="content-wrapper" class="col-1 scene_element scene_element--fadeinup">
+            <div id="content-wrapper" class="col-left scene_element scene_element--fadeinup">
                    <div>
   <p class="intro">
-    Hi – I’m Isaac Martin, a freelance web developer living in <span class="cross">Sydney</span> New York and working worldwide.
-    <a href="about">Read About Me</a>, <a href="work">Look at my Work</a> or <a href="contact">Get In Touch.</a>
+    Developer based in <span class="strike-through">Sydney</span> New York. Currently focused on writing code and building cool stuff. <br />
+    <a class="underline" href="about.html">Read about me</a>, <a class="underline" href="work.html">check out some projects</a> or <a class="underline" href="contact.html">get in touch.</a>
   </p>
 </div>
 
             </div>
 
-            <div class="scene_element scene_element--grow col-1">
+            <div class="scene_element scene_element--fade col-right">
                <div class="circle-graphic pulse"></div>
             </div>
          </div>
 
 
 
-      <!-- <div class="social-links scene_element scene_element--fadeinright"></div> -->
+      <nav class="social-links scene_element scene_element--fadeinright">
+         <a href="https://www.twitter.com/suprisaac" target="_blank"><i class="icon-social-twitter icons"></i></a>
+         <a href="https://instagram.com/isaacm" target="_blank"><i class="icon-social-instagram icons"></i></a>
+         <a href="mailto:contact@isaacmartin.co" target="_blank"><i class="icon-envelope icons"></i></a>
+
+      </nav>
    </div><!-- End #main -->
    
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
@@ -81,6 +92,7 @@
 <!-- <script src="https://use.fontawesome.com/81ec211b77.js"></script> -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothState.js/0.7.2/jquery.smoothState.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
 
 <script src="/js/main.js"></script>
  <!-- this will paste in all of the scripts you want before the closing body tag -->
