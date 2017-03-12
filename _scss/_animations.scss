@@ -73,6 +73,16 @@
   }
 }
 
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+  opacity: 1;
+  }
+}
+
 .m-scene {
   /** Basic styles for an animated element */
   .scene_element {
@@ -104,6 +114,11 @@
 
   .scene_element--grow {
     animation-name: grow;
+  }
+
+
+  .scene_element--fade {
+    animation-name: fade;
   }
 
 
