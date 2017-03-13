@@ -62,6 +62,7 @@ flex: 0 0 500px;
     width: 100%;
     text-align: left;
     background-color: #11142a;
+    padding-bottom: 30px;
 
     .nav-inner {
         padding: 30px;
@@ -116,7 +117,7 @@ flex: 0 0 500px;
 
 #content-wrapper {
     position: relative;
-    padding: 4rem 6rem 0 0;
+    padding: 10rem 6rem 0 0;
 
     .strike-through {
         position: relative;
@@ -178,6 +179,16 @@ p.intro {
     font-size: 5rem;
     line-height: 5.4rem;
     text-align: left;
+    margin: 0;
+    width: 80%;
+}
+
+p.about {
+    font-size: 3rem;
+    line-height: 3.4rem;
+    text-align: left;
+    width: 80%;
+    margin: 0;
 }
 
 

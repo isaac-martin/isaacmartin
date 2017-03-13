@@ -1,13 +1,15 @@
 ---
 layout: default
-title: Isaac Martin
+title: Isaac Martin | Contact
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div id="contact">
+  <form action="https://formspree.io/contact@isaacmartin.co" method="POST">
+    <input type="text" name="name" placeholder="Name">
+    <input type="email" name="_replyto" placeholder="Email">
+    <input type="tel" name="phone" placeholder="Phone Number">
+    <input type="text" name="location" placeholder="Location">
+    <input type="textarea" name="message" placeholder="Message">
+    <input type="submit" value="Send">
+</form>
 </div>
