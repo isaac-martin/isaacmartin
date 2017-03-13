@@ -4,6 +4,7 @@ $(function(){
       options = {
         debug: true,
         prefetch: true,
+        debug: true,
         cacheLength: 2,
         onStart: {
           duration: 1000, // Duration of our animation
