@@ -836,8 +836,8 @@ body {
       display: inline-block;
       position: absolute;
       right: 0;
-      bottom: 2.5rem;
-      height: 1rem;
+      bottom: 2.2rem;
+      height: .5rem;
       width: 100%;
       opacity: .95;
       background-image: -webkit-gradient(linear, left top, right top, from(#f78ca0), color-stop(19%, #f9748f), color-stop(60%, #fd868c), to(#fe9a8b));
@@ -846,41 +846,22 @@ body {
   #content-wrapper .underline {
     display: inline-block;
     position: relative; }
-    #content-wrapper .underline:before {
+    #content-wrapper .underline:after {
       content: '';
       display: inline-block;
       position: absolute;
       left: 0;
       bottom: 0;
-      height: 15px;
+      height: .5rem;
       width: 100%;
-      -webkit-transition: width 0s ease;
-      transition: width 0s ease; }
-    #content-wrapper .underline:after {
-      content: '';
-      display: inline-block;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      height: 15px;
-      width: 100%;
+      opacity: 1;
       background-image: -webkit-gradient(linear, left top, right top, from(#f78ca0), color-stop(19%, #f9748f), color-stop(60%, #fd868c), to(#fe9a8b));
       background-image: -webkit-linear-gradient(left, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
       background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-      -webkit-transition: width .5s ease;
-      transition: width .5s ease; }
-    #content-wrapper .underline:hover:before {
-      width: 0%;
-      background-image: -webkit-gradient(linear, left top, right top, from(#f78ca0), color-stop(19%, #f9748f), color-stop(60%, #fd868c), to(#fe9a8b));
-      background-image: -webkit-linear-gradient(left, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-      background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-      -webkit-transition: width .5s ease;
-      transition: width .5s ease; }
+      -webkit-transition: opacity .5s ease;
+      transition: opacity .5s ease; }
     #content-wrapper .underline:hover:after {
-      width: 0%;
-      background: transparent;
-      -webkit-transition: width 0s ease;
-      transition: width 0s ease; }
+      opacity: 0; }
 
 p.intro {
   font-size: 4rem;

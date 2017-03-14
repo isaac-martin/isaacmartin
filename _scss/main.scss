@@ -133,8 +133,8 @@ flex: 0 0 500px;
             display: inline-block;
             position: absolute;
             right: 0;
-            bottom: 2.5rem;
-            height: 1rem;
+            bottom: 2.2rem;
+            height: .5rem;
             width: 100%;
             opacity: .95;
             background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
@@ -144,39 +144,21 @@ flex: 0 0 500px;
     .underline {
         display: inline-block;
         position: relative;
-        &:before {
-            content: '';
+        &:after {
+                content: '';
                display: inline-block;
                position: absolute;
                left: 0;
                bottom: 0;
-               height: 15px;
+               height: .5rem;
                width: 100%;
-               transition: width 0s ease;
-        }
-
-        &:after {
-            content: '';
-            display: inline-block;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            height: 15px;
-            width: 100%;
-            background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-            transition: width .5s ease;
-        }
-
-        &:hover:before {
-            width: 0%;
-            background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-           transition: width .5s ease;
+                opacity: 1;
+               background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+               transition: opacity .5s ease;
         }
 
         &:hover:after {
-            width: 0%;
-           background: transparent;
-           transition: width 0s ease;
+            opacity: 0;
         }
     }
 }
