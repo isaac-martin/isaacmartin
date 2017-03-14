@@ -3,14 +3,16 @@
 @import "syntax";
 @import "animations";
 @import "fonts";
+@import "forms";
 
 body {
     background-color: #11142a;
     font-family: $font-bld;
-    color: #fbfbf8;
+    color: $white;
+    text-align: left;
 
     a {
-        color: #fbfbf8;
+        color: $white;
         text-decoration: none;
         &:hover {
             text-decoration: none;
@@ -54,6 +56,11 @@ flex: 0 0 500px;
         top: 20px;
     // background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
     background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+}
+
+.is-hidden {
+    display: none;
+    visibility: hidden;
 }
 
 .nav-bar {
@@ -176,8 +183,8 @@ flex: 0 0 500px;
 
 
 p.intro {
-    font-size: 5rem;
-    line-height: 5.4rem;
+    font-size: 4rem;
+    line-height: 4.2rem;
     text-align: left;
     margin: 0;
     width: 80%;
@@ -191,6 +198,13 @@ p.about {
     margin: 0;
 }
 
+p.contact {
+  font-size: 3rem;
+  line-height: 3.4rem;
+  text-align: left;
+  width: 80%;
+  margin: 0 0 60px 0;
+}
 
 //Work page
 
