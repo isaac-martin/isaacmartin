@@ -2,6 +2,11 @@
 	width: 80%;
 	font-size: .9rem;
 
+	@include phone{
+		width: 100%;
+		font-size: 1.4rem;
+	}
+
 }
 
 
@@ -20,6 +25,10 @@ input:-webkit-autofill {
 
 .half {
 	width: 48%;
+
+	@include phone{
+		width: 100%;
+	}
 }
 
 .half:nth-child(odd) {
@@ -32,7 +41,7 @@ input:-webkit-autofill {
 
 .send {
 	width: 200px;
-	background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+	background-image: $gradient;
 	color: $blue;
 	margin-top: 40px;
 	border: none;
@@ -79,6 +88,10 @@ input:-webkit-autofill {
 	width: 100%;
 	font-size: .9rem;
 	font-family: $font-reg;
+
+	@include phone{
+		font-size: 1.2rem;
+	}
 }
 
 
@@ -124,7 +137,7 @@ input:-webkit-autofill {
 	top: 0;
 	left: 0;
 	padding: 0.75em 0.15em;
-	color: #f78ca0;
+	color: $pink;
 	opacity: 0;
 	-webkit-transform: translate3d(0, 10%, 0);
 	transform: translate3d(0, 10%, 0);
@@ -136,7 +149,7 @@ input:-webkit-autofill {
 }
 
 .input__field--isao:focus + .input__label--isao::before {
-	background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+	background-image: $gradient;
 	-webkit-transform: scale3d(1, 1, 1);
 	transform: scale3d(1, 1, 1);
 }

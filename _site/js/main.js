@@ -1,6 +1,22 @@
 $(function(){
 'use strict';
 
+$.fn.social = function() {
+  $('.social-trigger').click(function() {
+    $('.social-links').toggleClass("social-active");
+    console.log('clicked');
+    });
+}
+
+$.fn.menu = function () {
+  $('.menu-trigger').click(function() {
+    $(this).toggleClass('icon-rotate');
+    $('.mobile-menu-overlay').toggleClass('overlay-open');
+    $('.mobile-menu-wrapper').fadeToggle();
+    $('body').toggleClass('stop-scroll');
+  });
+}
+
 
 $.fn.forms = function() {
 
@@ -45,6 +61,9 @@ var $contactForm = $('#contact-form');
 
   $( document ).ready(function() {
       $().forms();
+      $().social();
+      $().menu();
+
   });
 
   var $page = $('#main'),
@@ -73,6 +92,8 @@ var $contactForm = $('#contact-form');
         },
         onAfter: function( $container ) {
             $().forms();
+            $().social();
+            $().menu();
         }
       },
       smoothState = $page.smoothState(options).data('smoothState');
