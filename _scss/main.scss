@@ -170,7 +170,8 @@ flex: 0 0 500px;
           font-size: 4rem;
           margin: 0 0 4rem 0;
         }
-        }
+
+
         &:after {
             content: '';
             display: inline-block;
@@ -200,6 +201,7 @@ flex: 0 0 500px;
             opacity: 1;
         }
     }
+}
 }
 
 .social-links {
