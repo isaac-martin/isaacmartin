@@ -3,9 +3,11 @@ $(function(){
 
 $.fn.social = function() {
   $('.social-trigger').click(function() {
-    $('.social-links').toggleClass("social-active");
-    console.log('clicked');
-    });
+    $('.social-links').addClass("social-active");
+      setTimeout(function () {
+        $('.social-links').removeClass('social-active');
+      }, 1500);
+  });
 }
 
 $.fn.menu = function () {
