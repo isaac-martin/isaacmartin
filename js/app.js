@@ -257,7 +257,8 @@ var client = new Keen({
 }
 */
 window.onbeforeunload = function(){
-	
+	for(var i=0;i<10;i++)
+		console.log(i);
 	return "Sure?";
 }
 
