@@ -255,7 +255,7 @@ jQuery(document).scroll(function(){
 		scrl = document.documentElement.scrollTop;
 	else
 		scrl = document.body.scrollTop;
-	console.log("Scrolled start", document.documentElement.scrollHeight, scrl, document.body.scrollTop);
+	console.log("Scrolled start", document.documentElement.scrollHeight, scrl);
 	/*if(window.scrollY+ jQuery(window).height() > parseInt(localStorage.getItem("scroll"))){
 
 		localStorage.setItem("scroll",(window.scrollY + jQuery(window).height()));
