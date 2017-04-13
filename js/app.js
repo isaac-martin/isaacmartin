@@ -122,7 +122,7 @@ var client = new Keen({
 
 		console.log("ON load running");
 
-		// Step 1: Check for the Cookie		--> Currently we are manually creating the cookie,
+		// Step 1: Check for the Cookie		
 		checkCookie("WT");
 
 		localStorage.setItem("wt_time", new Date());
@@ -202,17 +202,13 @@ var client = new Keen({
 	}
 	function fn(obj){
 
-		//localStorage.setItem("obj",JSON.stringify(obj));
-		if(obj){
-
-			console.log(obj.path[0].href);
+		if(obj)
 			localStorage.setItem("nextUrl", obj.path[0].href);
-		}	
 	}
 
 ////////////// To send details when moving away from page ////////////////////////
 
-/*window.onbeforeunload = function(e) {
+window.onbeforeunload = function(e) {
 
 	//return "Going?";
 	var d1 = new Date(localStorage.getItem("wt_time"));
@@ -235,7 +231,6 @@ var client = new Keen({
 	  cookie: getCookie("WT")
 	};
 	localStorage.removeItem("nextUrl");
-	
 	client.addEvent("single",userdata, function(err, res){
 	  if (err) {
 		// there was an error!
@@ -247,47 +242,42 @@ var client = new Keen({
 	  }
 	});
 
-	for(var i=0;i<10000;i++){
+	for(var i=0;i<1000;i++){
 
 		console.log(i);
 	}
-	localStorage.removeItem("scroll");
-	localStorage.removeItem("%scroll");
 	//send(userdata);
 }
-*/
-window.onbeforeunload = function(){
-	for(var i=0;i<10;i++)
-		console.log(i);
-	return "Sure?";
-}
+jQuery(document).scroll(function(){
 
-//(function($){
-	
-	if(jQuery(window).height()==document.body.scrollHeight){
+	var scrl = 0;
+	if(browserType() === "Firefox")
+		scrl = document.documentElement.scrollTop;
+	else
+		scrl = document.body.scrollTop;
+	console.log("Scrolled start", document.documentElement.scrollHeight, scrl, document.body.scrollTop);
+	/*if(window.scrollY+ jQuery(window).height() > parseInt(localStorage.getItem("scroll"))){
 
-		jQuery(document).scroll(function(){
-
-			if(window.scrollY+ jQuery(window).height() > parseInt(localStorage.getItem("scroll"))){
-
-				console.log("scroll",(window.scrollY + jQuery(window).height()));
-				localStorage.setItem("scroll",(window.scrollY + jQuery(window).height()));
-				localStorage.setItem("%scroll",parseFloat(localStorage.getItem("scroll"))/(document.body.scrollHeight)*100);
-			}
-		});
+		localStorage.setItem("scroll",(window.scrollY + jQuery(window).height()));
+		localStorage.setItem("%scroll",parseFloat(localStorage.getItem("scroll"))/(document.body.scrollHeight)*100);
 	}
-//})(jQuery);
+	*/
+});
 
-//(function($){
-	
-	jQuery(document).ready(function(){
+jQuery(document).ready(function(){
 
-		if(jQuery(window).height()==document.body.scrollHeight){
+	var scrl = 0;
+	console.log(browserType() == "Firefox");
+	if(browserType() == "Firefox")
+		scrl = document.documentElement.scrollTop;
+	else
+		scrl = document.body.scrollTop;
+	console.log("Scrolled", document.documentElement.scrollHeight, scrl);
+	/*if(jQuery(window).height()!=document.body.scrollHeight){
 
-			console.log("scroll",(window.scrollY + jQuery(window).height()));
-			localStorage.setItem("scroll",(window.scrollY + jQuery(window).height()));
-			localStorage.setItem("%scroll",parseFloat(localStorage.getItem("scroll"))/(document.body.scrollHeight)*100);
-		}
-		
-	});
-//})(jQuery);
+		// console.log("Logs",window.scrollY,$(window).height());
+		localStorage.setItem("scroll",(window.scrollY + jQuery(window).height()));
+		localStorage.setItem("%scroll",parseFloat(localStorage.getItem("scroll"))/(document.body.scrollHeight)*100);
+	}
+	*/
+});
