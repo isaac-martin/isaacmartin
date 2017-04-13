@@ -202,8 +202,8 @@ var client = new Keen({
 	}
 	function fn(obj){
 
-		if(obj)
-			localStorage.setItem("nextUrl", obj.path[0].href);
+		//if(obj)
+		//	localStorage.setItem("nextUrl", obj.path[0].href);
 	}
 
 ////////////// To send details when moving away from page ////////////////////////
