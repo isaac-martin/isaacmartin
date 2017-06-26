@@ -8,7 +8,7 @@
 // THE BIG DATA MODEL!
 
 //
- var key = document.getElementsByTagName("wt_id")[0].innerHTML;
+//  var key = document.getElementsByTagName("wt_id")[0].innerHTML;
  Keen.ready(function(){
 	 Keen.debug = true;
 
