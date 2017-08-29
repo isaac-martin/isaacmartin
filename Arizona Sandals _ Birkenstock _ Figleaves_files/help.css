@@ -1,0 +1,39 @@
+h4.details-header {
+	padding: 20px;
+	border: 1px solid #a9a9a9;
+	margin-bottom: 30px;
+}
+.details-header:after {
+	font-family: FontAwesome!important;
+    content: '\f107';
+    display: block;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    font-size: 18px;
+    line-height: 18px;
+    height: 18px;
+    width: 18px;
+    margin-top: -9px;
+    text-align: center;
+}
+.details-header.expanded:after {
+	content: '\f068';
+    font-size: 10px;
+}
+ul.bulleted-list {
+	list-style-type: disc;
+	padding-left: 15px;
+	margin-left: 15px;
+	margin-bottom: 10px;
+}
+ul.bulleted-list li {
+	margin-bottom: 7px;
+}
+a.link {
+	text-decoration: underline;
+}
+a.link:hover {
+	text-decoration: none;
+	color: #a9a9a9;
+}
