@@ -1,4 +1,4 @@
-﻿
+
 //<![CDATA[
 window.scInitTime0 = new Date().getTime();
 
