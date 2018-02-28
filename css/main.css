@@ -1113,7 +1113,9 @@ p.contact {
   width: auto;
   margin: 0 auto;
   display: block;
-  text-align: left; }
+  text-align: left; 
+    max-width: 1000px;
+    float: left;}
   @media screen and (max-width: 1319px) {
     #projects {
       text-align: center; } }
